@@ -9,17 +9,21 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title>Prueba de PHP</title>
         <link rel="Stylesheet" href="css/bootstrap.min.css">
+        <link rel="Stylesheet" href="js/bootstrap.min.js">
         <style>
             body{
                 background: black;
-                background-image: url(img/image1.jpg);
+                background-image: url(img/fondoapp2.jpg);
+            }
+            jumbotron{
+                background-color: #23527c;
             }
         </style>
     </head>
     <body>
         <div class="container" id="centro">
             <div class="row">
-                <div class="col-md-12"><h2 class="text-center">EJEMPLO DE INICIO DE SESION EN PHP</h2></div>
+                <div class="col-md-12"><h2 class="text-center">HISTOLOGIA</h2></div>
             </div>
             <div class="row">
                 <div class="col-md-4"></div>
@@ -31,7 +35,7 @@ and open the template in the editor.
                         <input id="usuario_nombre" class="form-control" type="text" placeholder="DNI">
                         <br>
                         <br>
-                        <input id="usuario_clave" class="form-control"type="password" placeholder="PW">
+                        <input id="usuario_clave" class="form-control"type="password" placeholder="Password">
                         <br>
                         <br>
                         <button class="btn btn-success btn-block" onclick="chequeaPass();"> ENTRAR </button>
@@ -46,7 +50,7 @@ and open the template in the editor.
     </body>
     <script src="js/jquery-3.1.0.min.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script>
+    <script>        
         function chequeaPass(){
             var _usuario_nombre = $('#usuario_nombre').val();
             var _usuario_clave = $('#usuario_clave').val();

@@ -7,7 +7,8 @@ $mysqli = conectaBBDD();
          $usuario_nombre = $_POST['usuario_nombre'];
          $usuario_clave = $_POST['usuario_clave'];
 
-         echo $usuario_nombre;
+
+        
          
          //hago la consulta a la bbdd
          $resultado_consulta = $mysqli ->query("SELECT * FROM usuario where DNI = '$usuario_nombre' ");
@@ -21,16 +22,41 @@ $mysqli = conectaBBDD();
              $r = $resultado_consulta -> fetch_array();
              $DNI = $r['DNI'];
              $Password = $r['Password'];
-             if($usuario_clave = $Password){
-                 
+             $Tipo = $r['Tipo'];
+             if($usuario_clave == $Password){                 
                  //inicializo la sesion
                  session_start();
                  //guardo los datos del usuario que ha hecho el login correcto
                  $_SESSION['DNI'] = $DNI;
                  $_SESSION['Nombre'] = $r['Nombre'];
                  $_SESSION['Email'] = $r['Email'];
-                 require 'menu_inicio.php';
+                if($Tipo == 0){                 
+                require 'menu_inicio.php';
+                 //ejemplo de volcado de una query a un array en php
+                 //creo el array
+                            }
+                else{
+                    require 'menu_administrador.php';
+                }
+                 //ejemplo de volcado de una query a un array en php
+                 //creo el array
+                $usuarios = array();
+                //hago la consulta a la bbdd
+                $consulta_usuarios = $mysqli -> query ("select * from usuario");
+                //saco el numero de usuarios que hay en la bbdd
+                $num_usuarios = $consulta_usuarios -> num_rows;
+                
+                
+//                for($i = 0; $i < $num_usuarios; $i++){
+//                    $r = $consulta_usuarios -> fetch_array();
+//                    $usuarios[$i][0] = $r['DNI'];
+//                    $usuarios[$i][1] = $r['Nombre'];
+//                    $usuarios[$i][2] = $r['Apellido'];
+//                    $usuarios[$i][3] = $r['Email'];
+//                    $Tipo[$i][4]= $r['Tipo'];
+//                }
              }
+             
              else {
                  require 'mensaje_error.php';
              }
@@ -39,6 +65,6 @@ $mysqli = conectaBBDD();
          else{
              require 'mensaje_error.php';
          }
+         
 
 ?>
-

@@ -1,8 +1,14 @@
 <?php
+?>
+<style>
+    .warning{
+        font: bold;
+        color: #c9302c;
+        font-weight: 600;
+        margin-top: 35%; 
+    }
+    
+</style>
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+    <h1 class="text-center warning">ALGO EN SU REGISTRO NO ES CORRECTO</h1> 
 
