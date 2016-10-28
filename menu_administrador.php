@@ -29,8 +29,7 @@ if($Tipo == 1){
             <li><a href="#" style="margin-left: 5px;" onclick="cargAdivina()">ADIVINA</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-              <li><a href="#"><?php echo $nombre;?></a></li>
-              
+              <li><a href="#"><?php echo $nombre;?></a></li>   
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -53,7 +52,7 @@ if($Tipo == 2){
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Editor</a></li>
+            <li class="active"><a href="#">EDITOR</a></li>
             <li><a href="#" style="margin-left: 5px;" onclick="cargUsuarios()">ADMINISTRAR</a></li>
             <li><a href="#" style="margin-left: 5px;" onclick="cargQuiz()">QUIZ</a></li>
             <li><a href="#" style="margin-left: 5px;" onclick="cargReverso()">REVERSO</a></li>
@@ -62,8 +61,7 @@ if($Tipo == 2){
             <li><a href="#" style="margin-left: 5px;" onclick="cargAdivina()">ADIVINA</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-              <li><a href="#"><?php echo $nombre;?></a></li>
-              
+              <li><a href="#"><?php echo $nombre;?></a></li>   
           </ul>
         </div><!--/.nav-collapse -->
       </div>
