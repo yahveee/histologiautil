@@ -9,7 +9,7 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title>PRUEBA quien es quien</title>
         <link rel="Stylesheet" href="css/bootstrap.min.css">
-       
+          
         
     </head>
     <body>
@@ -19,7 +19,11 @@ and open the template in the editor.
                     <div id="posicionY"></div>
                     <br>
                     <div id="posicionX"></div>
-                    <div id="etiqueta01" class="btn btn-primary" style="position: absolute; top: 200px; left: 100px;">ETIQUETA 1</div>
+                    <div id="etiqueta01" class="btn btn-primary" style="position: absolute; top: 200px; left: 100px; z-index: 2;">ETIQUETA 1</div>
+                    <div style="position: absolute; top: 200px; left: 100px; border: #000 solid 1px;"></div>
+                    <div style="position: absolute; top: 400px; left: 100px; border: #000 solid 1px;"></div>
+                    <div style="position: absolute; top: 600px; left: 100px; border: #000 solid 1px;"></div>
+                    <div style="position: absolute; top: 800px; left: 100px; border: #000 solid 1px;"></div>
                     <div id></div>
                     <div></div>
                     <div></div>
@@ -55,13 +59,13 @@ and open the template in the editor.
                       $('#' + _id).animate({top: "200px", left: "100px"});
             }else if (_posicion.top >= altura/4 && _posicion.top < altura/2){
                       $('#etiqueta01').removeClass("btn-danger").addClass("btn-info");
-                      $('#' + _id).animate({top: "200px", left: "100px"});
+                      $('#' + _id).animate({top: "400px", left: "100px"});
             }else if (_posicion.top >= altura/2 && _posicion.top < altura/4*3){
                       $('#etiqueta01').removeClass("btn-info").addClass("btn-danger");
-                      $('#' + _id).animate({top: "200px", left: "100px"});
+                      $('#' + _id).animate({top: "600px", left: "100px"});
             }else if (_posicion.top >= altura/2 && _posicion.top < altura/4*4){
                       $('#etiqueta01').removeClass("btn-danger").addClass("btn-primary");
-                      $('#' + _id).animate({top: "200px", left: "100px"});
+                      $('#' + _id).animate({top: "800px", left: "100px"});
             }
         }
 
