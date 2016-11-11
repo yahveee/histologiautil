@@ -3,8 +3,10 @@
 if(!isset($_SESSION) ){session_start();}
 //leo el valor que guarde en la variable Nombre
 $nombre = $_SESSION['Nombre'];
+$Tipo = $_SESSION['Tipo'];
 ?>
 <?php
+
 if($Tipo == 1){
     echo '
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -21,12 +23,10 @@ if($Tipo == 1){
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">ADMINISTRADOR</a></li>
-            <li><a href="#" style="margin-left: 5px;" onclick="cargUsuarios()">ADMINISTRAR</a></li>
-            <li><a href="#" style="margin-left: 5px;" onclick="cargQuiz()">QUIZ</a></li>
-            <li><a href="#" style="margin-left: 5px;" onclick="cargReverso()">REVERSO</a></li>
-            <li><a href="#" style="margin-left: 5px;" onclick="cargWho()">WHOISWHO?</a></li>
-            <li><a href="#" style="margin-left: 5px;" onclick="cargOveja()">OVEJA-PAREJA</a></li>
-            <li><a href="#" style="margin-left: 5px;" onclick="cargAdivina()">ADIVINA</a></li>
+            <li><a href="#" style="margin-left: 5px;" onclick="cargUsuarios()">ALUMNOS</a></li>
+            <li><a href="#" style="margin-left: 5px;" onclick="cargAdministrador()">ADMINISTRAR ALUMNOS</a></li>
+            <li><a href="#" style="margin-left: 5px;" onclick="cargAltaa()">ALTA ALUMNOS</a></li>
+            <li><a href="#" style="margin-left: 5px;" onclick="cargBajaa()">BAJA ALUMNOS</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
               <li><a href="#"><?php echo $nombre;?></a></li>   
@@ -53,12 +53,11 @@ if($Tipo == 2){
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">EDITOR</a></li>
-            <li><a href="#" style="margin-left: 5px;" onclick="cargUsuarios()">ADMINISTRAR</a></li>
-            <li><a href="#" style="margin-left: 5px;" onclick="cargQuiz()">QUIZ</a></li>
-            <li><a href="#" style="margin-left: 5px;" onclick="cargReverso()">REVERSO</a></li>
-            <li><a href="#" style="margin-left: 5px;" onclick="cargWho()">WHOISWHO?</a></li>
-            <li><a href="#" style="margin-left: 5px;" onclick="cargOveja()">OVEJA-PAREJA</a></li>
-            <li><a href="#" style="margin-left: 5px;" onclick="cargAdivina()">ADIVINA</a></li>
+            <li><a href="#" style="margin-left: 5px;" onclick="cargEQuiz()">EDITAR QUIZ</a></li>
+            <li><a href="#" style="margin-left: 5px;" onclick="cargEReverso()">EDITAR REVERSO</a></li>
+            <li><a href="#" style="margin-left: 5px;" onclick="cargEWho()">EDITAR WHOISWHO?</a></li>
+            <li><a href="#" style="margin-left: 5px;" onclick="cargEOveja()">EDITAR OVEJA-PAREJA</a></li>
+            <li><a href="#" style="margin-left: 5px;" onclick="cargEAdivina()">EDITAR ADIVINA</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
               <li><a href="#"><?php echo $nombre;?></a></li>   
@@ -70,55 +69,93 @@ if($Tipo == 2){
     <img src="imagenes/'. $_SESSION['DNI'].'.jpg" class="img-circle" style="width: 80px;">
 </div>';
 }
+if($Tipo == 1){
+    echo '<div id="marcoCentral">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="btn btn-block text-center" style="background-color: #122b40; color: #fff; font-size: 48px;" onclick="cargUsuarios()">ALUMNOS</div>
+    <br>
+    <br>
+    <div class="btn btn-block text-center" style="background-color: #245269; color: #fff; font-size: 48px;" onclick="cargAdministrador()">ADMINISTRAR ALUMNO</div>
+    <br>
+    <br>
+    <div class="btn btn-block text-center" style="background-color: #286090; color: #fff; font-size: 48px;" onclick="cargAltaa()">DAR DE ALTA ALUMNO</div>
+    <br>
+    <br>
+    <div class="btn btn-block text-center" style="background-color: #1b6d85; color: #fff; font-size: 48px;" onclick="cargBajaa()">DAR DE BAJA ALUMNO</div>
+    <br>
+    <br>
+
+</div>';
+}
+if($Tipo == 2){
+    echo '<div id="marcoCentral">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="btn btn-block text-center" style="background-color: #122b40; color: #fff; font-size: 48px;" onclick="cargEQuiz()">EDITAR QUIZ</div>
+    <br>
+    <br>
+    <div class="btn btn-block text-center" style="background-color: #245269; color: #fff; font-size: 48px;" onclick="cargEReverso()">EDITAR REVERSO</div>
+    <br>
+    <br>
+    <div class="btn btn-block text-center" style="background-color: #286090; color: #fff; font-size: 48px;" onclick="cargEWho()">EDITAR WHOISWHO</div>
+    <br>
+    <br>
+    <div class="btn btn-block text-center" style="background-color: #1b6d85; color: #fff; font-size: 48px;" onclick="cargEOveja()">EDITAR OVEJA PAREJA</div>
+    <br>
+    <br>
+    <div class="btn btn-block text-center" style="background-color: #31b0d5; color: #fff; font-size: 48px;" onclick="cargEAdivina()">EDITAR ADIVINA</div>
+</div>';
+}
 ?>
 
-<div id="marcoCentral">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="btn btn-block text-center" style="background-color: #122b40; color: #fff; font-size: 48px;" onclick="cargQuiz()">QUIZ</div>
-    <br>
-    <br>
-    <div class="btn btn-block text-center" style="background-color: #245269; color: #fff; font-size: 48px;" onclick="cargReverso()">REVERSO</div>
-    <br>
-    <br>
-    <div class="btn btn-block text-center" style="background-color: #286090; color: #fff; font-size: 48px;" onclick="cargWho()">WHO IS WHO?</div>
-    <br>
-    <br>
-    <div class="btn btn-block text-center" style="background-color: #1b6d85; color: #fff; font-size: 48px;" onclick="cargOveja()">OVEJA-PAREJA</div>
-    <br>
-    <br>
-    <div class="btn btn-block text-center" style="background-color: #31b0d5; color: #fff; font-size: 48px;" onclick="cargAdivina()">ADIVINA</div>
-</div>
 
 <script>
-        function cargQuiz(){
-            $('#marcoCentral').load("quiz.php");
+        function cargEQuiz(){
+            $('#marcoCentral').load("editQuiz.php");
         }
-        function cargReverso(){
-            $('#marcoCentral').load("reverso.php");
+        function cargEReverso(){
+            $('#marcoCentral').load("editReverso.php");
         }
-        function cargWho(){
-            $('#marcoCentral').load("whoIsWho.php");
+        function cargEWho(){
+            $('#marcoCentral').load("editWho.php");
         }
-        function cargOveja(){
-            $('#marcoCentral').load("oveja.php");
+        function cargEOveja(){
+            $('#marcoCentral').load("editOveja.php");
         }
-        function cargAdivina(){
-            $('#marcoCentral').load("adivina.php");
+        function cargEAdivina(){
+            $('#marcoCentral').load("editAdivina.php");
         }
         function cargInicio(){
-            $('#marcoCentral').load("menu_inicio.php");
+            $('#marcoCentral').load("menu_administrador.php");
         }
         function cargUsuarios(){
             $('#marcoCentral').load("usuarios.php");
+        }
+        function cargAdministrar(){
+            $('#marcoCentral').load("adminAlumnos.php");
+        }
+        function cargAltaa(){
+            $('#marcoCentral').load("altaAlumnos.php");
+        }
+        function cargBajaa(){
+            $('#marcoCentral').load("bajaAlumnos.php");
         }
         $(".nav a").on("click", function(){
             $(".nav").find(".active").removeClass("active");

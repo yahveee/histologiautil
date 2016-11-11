@@ -9,8 +9,8 @@ $nombre = $_SESSION['Nombre'];
 .frame {
 	text-align: center;	
 	position: relative;
-	cursor: pointer;	
-	perspective: 500;
+	cursor: pointer;
+        perspective: 500;
         margin-top: 100px;
         margin-left: 140px;
 }

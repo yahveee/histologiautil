@@ -30,6 +30,7 @@ $mysqli = conectaBBDD();
                  $_SESSION['DNI'] = $DNI;
                  $_SESSION['Nombre'] = $r['Nombre'];
                  $_SESSION['Email'] = $r['Email'];
+                 $_SESSION['Tipo'] = $r['Tipo']; 
                 if($Tipo == 0){                 
                 require 'menu_inicio.php';
                  //ejemplo de volcado de una query a un array en php
