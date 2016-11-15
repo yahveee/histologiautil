@@ -84,7 +84,7 @@ if($Tipo == 1){
     <div class="btn btn-block text-center" style="background-color: #122b40; color: #fff; font-size: 48px;" onclick="cargUsuarios()">ALUMNOS</div>
     <br>
     <br>
-    <div class="btn btn-block text-center" style="background-color: #245269; color: #fff; font-size: 48px;" onclick="cargAdministrador()">ADMINISTRAR ALUMNO</div>
+    <div class="btn btn-block text-center" style="background-color: #245269; color: #fff; font-size: 48px;" onclick="cargAdministrar()">ADMINISTRAR ALUMNO</div>
     <br>
     <br>
     <div class="btn btn-block text-center" style="background-color: #286090; color: #fff; font-size: 48px;" onclick="cargAltaa()">DAR DE ALTA ALUMNO</div>

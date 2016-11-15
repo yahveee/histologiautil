@@ -1,8 +1,8 @@
 <?php
+//ahora sesion_start() con la sesion que iniciamos en login
+if(!isset($_SESSION) ){session_start();}
+//leo el valor que guarde en la variable Nombre
+$nombre = $_SESSION['Nombre'];
+?>
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
