@@ -4,13 +4,13 @@ include './misFunciones.php';//siempre debe incluirse para tratar con php-BBDD
 if(!isset($_SESSION) ){session_start();}
 //leo el valor que guarde en la variable Nombre
 $mysqli = conectaBBDD();//siempre debe incluirse para tratar con php-BBDD
-$usuario_DNI = $_POST["usuario_DNI"];
-$usuario_nombre = $_POST["usuario_nombre"];
-$usuario_apellido = $_POST["usuario_apellido"];
-$usuario_email = $_POST["usuario_email"];
+$alumno_DNI = $_POST["alumno_DNI"];
+$alumno_nombre = $_POST["alumno_nombre"];
+$alumno_apellido = $_POST["alumno_apellido"];
+$alumno_email = $_POST["alumno_email"];
 
 
-$borrar_usuarios = $mysqli -> query ('delete from usuario where DNI ='. $usuario_DNI .'');
+$crear_usuarios = $mysqli -> query ('INSERTINTO usuario where VALUES('. $alumno_DNI .','..','..'');
 
 ?>
 

@@ -25,19 +25,19 @@ $consulta_usuarios = $mysqli -> query ("select * from usuario");//Tambien debe i
 <div id="crear"></div>
 <script>
     function crearUsuario(){
-                var _usuario_DNI = $('#alumno_DNI').val();
-                var _usuario_nombre = $('#alumno_nombre').val();
-                var _usuario_apellido = $('#alumno_apellido').val();
-                var _usuario_email = $('#alumno_email').val();
+                var _alumno_DNI = $('#alumno_DNI').val();
+                var _alumno_nombre = $('#alumno_nombre').val();
+                var _alumno_apellido = $('#alumno_apellido').val();
+                var _alumno_email = $('#alumno_email').val();
                 console.log(_usuario_DNI);
                 //console.log(usuario_nombre);
                 //console.log(usuario_clave);
 
-                $('#crear').load("crearUsuario.php",{
-                    usuario_DNI : _usuario_DNI,
-                    usuario_nombre : _usuario_nombre,
-                    usuario_apellido : _usuario_apellido,
-                    usuario_email : _usuario_email
+                $('#crear').load("crearAlumno.php",{
+                    alumno_DNI : _alumno_DNI,
+                    alumno_nombre : _alumno_nombre,
+                    alumno_apellido : _alumno_apellido,
+                    alumno_email : _alumno_email
                 });
 
 
