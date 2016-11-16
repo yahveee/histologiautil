@@ -10,7 +10,7 @@ $alumno_apellido = $_POST["alumno_apellido"];
 $alumno_email = $_POST["alumno_email"];
 
 
-$crear_usuarios = $mysqli -> query ('INSERTINTO usuario where VALUES('. $alumno_DNI .','..','..'');
+//$crear_usuarios = $mysqli -> query ('INSERTINTO usuario where VALUES('. $alumno_DNI .','..','..'');
 
 ?>
 
