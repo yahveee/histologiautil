@@ -14,11 +14,11 @@ $mysqli = conectaBBDD();//siempre debe incluirse para tratar con php-BBDD
 <div >
     <input id="usuario_DNI" class="form-control" type="text" placeholder="INTRODUZCA EL DNI">
     <br>
-    <button class="btn btn-success btn-block" onclick="chequeaPass();"> BORRAR USUARIO </button>
+    <button class="btn btn-success btn-block" onclick="borrarUsuario();"> BORRAR USUARIO </button>
 </div>
 <div id="borrar"></div>
 <script>
-    function chequeaPass(){
+    function borrarUsuario(){
                 var _usuario_DNI = $('#usuario_DNI').val();
                 console.log(_usuario_DNI);
                 //console.log(usuario_nombre);

@@ -23,10 +23,11 @@ for ($i = 0; $i < $num_usuarios; $i++){
 <br>
 <br>
 <br>
-<table class="table  table-condensed table-bordered" style="background-color: white;">
+<table class="table  table-condensed table-bordered" style="background-color: #999; color: whitesmoke;">
     <?php
     for ($i = 0; $i < $num_usuarios; $i++){
         echo '<tr>';
+        echo '<td>'.$usuarios[$i][0].'</td>';
         echo '<td>'.$usuarios[$i][1].'</td>';
         echo '<td>'.$usuarios[$i][2].'</td>';
         echo '<td>'.$usuarios[$i][3].'</td>';
