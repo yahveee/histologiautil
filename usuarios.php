@@ -13,7 +13,7 @@ $num_usuarios = $consulta_usuarios -> num_rows;
 //monto un bucle for para cargar en el array los resultados de la query
 for ($i = 0; $i < $num_usuarios; $i++){
     $r = $consulta_usuarios -> fetch_array();
-    $usuarios[$i][0] = $r['DNI '];
+    $usuarios[$i][0] = $r['DNI'];
     $usuarios[$i][1] = $r['Nombre'];
     $usuarios[$i][2] = $r['Apellido'];
     $usuarios[$i][3] = $r['Email'];
