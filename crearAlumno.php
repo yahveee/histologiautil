@@ -8,9 +8,17 @@ $alumno_DNI = $_POST["alumno_DNI"];
 $alumno_nombre = $_POST["alumno_nombre"];
 $alumno_apellido = $_POST["alumno_apellido"];
 $alumno_email = $_POST["alumno_email"];
+$alumno_pass = $_POST["alumno_pass"];
 
 
-//$crear_usuarios = $mysqli -> query ('INSERTINTO usuario where VALUES('. $alumno_DNI .','..','..'');
+$crear_usuarios = $mysqli -> query ("INSERT INTO usuario(DNI,Nombre,Apellido,Password,Email) VALUES($alumno_DNI".",'".$alumno_nombre."','".$alumno_apellido."','".$alumno_pass."','".$alumno_email."')");
+
+if($mysqli->affected_rows == 1){
+    echo 'SE HA INSERTADO EL USUARIO';
+}
+else{
+    echo $mysqli->error;
+}
 
 ?>
 
