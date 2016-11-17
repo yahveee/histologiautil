@@ -26,6 +26,7 @@ $nombre = $_SESSION['Nombre'];
           </ul>
           <ul class="nav navbar-nav navbar-right">
               <li><a href="#"><?php echo $nombre;?></a></li>
+              <li><a href="./">Cerrar sesión<span class="sr-only"></span></a></li>
               
           </ul>
         </div><!--/.nav-collapse -->

@@ -24,12 +24,12 @@ if($Tipo == 1){
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">ADMINISTRADOR</a></li>
             <li><a href="#" style="margin-left: 5px;" onclick="cargUsuarios()">ALUMNOS</a></li>
-            <li><a href="#" style="margin-left: 5px;" onclick="cargAdministrador()">ADMINISTRAR ALUMNOS</a></li>
             <li><a href="#" style="margin-left: 5px;" onclick="cargAltaa()">ALTA ALUMNOS</a></li>
             <li><a href="#" style="margin-left: 5px;" onclick="cargBajaa()">BAJA ALUMNOS</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-              <li><a href="#"><?php echo $nombre;?></a></li>   
+              <li><a href="#"><?php echo $nombre;?></a></li>
+              <li><a href="./">Cerrar sesión<span class="sr-only"></span></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -60,7 +60,8 @@ if($Tipo == 2){
             <li><a href="#" style="margin-left: 5px;" onclick="cargEAdivina()">EDITAR ADIVINA</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-              <li><a href="#"><?php echo $nombre;?></a></li>   
+              <li><a href="#"><?php echo $nombre;?></a></li>
+              <li><a href="./">Cerrar sesión<span class="sr-only"></span></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
